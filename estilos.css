@@ -1,0 +1,1282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffaf0;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   BANDERA
+========================= */
+
+.bandera {
+    width: 100%;
+    height: 105px;
+    overflow: hidden;
+    position: relative;
+    animation: moverBandera 3s ease-in-out infinite alternate;
+}
+
+.bandera div {
+    width: 100%;
+}
+
+.amarillo {
+    height: 50%;
+    background: #ffcd00;
+}
+
+.azul {
+    height: 25%;
+    background: #003893;
+}
+
+.rojo {
+    height: 25%;
+    background: #ce1126;
+}
+
+@keyframes moverBandera {
+
+    0% {
+        transform: skewX(0deg);
+    }
+
+    50% {
+        transform: skewX(-1deg);
+    }
+
+    100% {
+        transform: skewX(1deg);
+    }
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: linear-gradient(
+        145deg,
+        #dae909,#003893,
+        #f80404
+    );
+
+    color: white;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 2px 20px rgba(0,0,0,.3);
+}
+
+
+.titulo {
+
+    min-height: 110px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    text-align: center;
+
+    padding: 15px;
+
+}
+
+
+.colombia-icono {
+
+    font-size: 10px;
+
+}
+
+
+.titulo h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+}
+
+
+.titulo h1 span {
+
+    color: #ffcd00;
+
+}
+
+
+.titulo p {
+
+    font-size: 11px;
+
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+nav {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    padding: 8px 15px 12px;
+
+    background: rgba(0,0,0,.18);
+
+}
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 4px 13px;
+
+    border-radius: 25px;
+
+    transition: .3s;
+
+}
+
+
+nav a:hover {
+
+    background: #ffcd00;
+
+    color: #111;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================
+   INICIO
+========================= */
+
+.inicio {
+
+    min-height: 600px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 50px 20px;
+
+    background:
+
+        linear-gradient(
+            rgba(0,40,90,.45),
+            rgba(0,0,0,.65)
+        ),
+
+        url(
+            "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=90"
+        );
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.inicio-contenido {
+
+    max-width: 900px;
+
+    text-shadow:
+        0 3px 8px rgba(0,0,0,.8);
+
+}
+
+
+.pequeno {
+
+    color: #ffda26;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.inicio h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(42px, 7vw, 75px);
+
+    line-height: 1.1;
+
+    margin: 15px 0;
+
+}
+
+
+.inicio h2 span {
+
+    color: #ffcd00;
+
+}
+
+
+.inicio p {
+
+    font-size: 20px;
+
+    margin: 10px auto;
+
+    max-width: 800px;
+
+}
+
+
+.boton {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 15px 28px;
+
+    background: #ffcd00;
+
+    color: #111;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+    transition: .3s;
+
+}
+
+
+.boton:hover {
+
+    transform: scale(1.08);
+
+    background: white;
+
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.seccion {
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 75px 0;
+
+}
+
+
+.fondo {
+
+    width: 100%;
+
+    max-width: none;
+
+    padding-left: 4%;
+
+    padding-right: 4%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffdf8,
+            #fff0cf
+        );
+
+}
+
+
+.titulo-seccion {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.titulo-seccion h2,
+.seccion h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+
+    color: #073d83;
+
+    margin: 10px 0;
+
+}
+
+
+.titulo-seccion p {
+
+    font-size: 17px;
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+.etiqueta {
+
+    display: inline-block;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    background: #ffcd00;
+
+    color: #111;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+}
+
+
+.etiqueta.azul {
+
+    background: #0874db;
+
+    color: white;
+
+}
+
+
+.etiqueta.rojo {
+
+    background: #e31c2d;
+
+    color: white;
+
+}
+
+
+.etiqueta.verde {
+
+    background: #0d9b4d;
+
+    color: white;
+
+}
+
+
+.etiqueta.morado {
+
+    background: #7138a5;
+
+    color: white;
+
+}
+
+
+/* =========================
+   HISTORIA
+========================= */
+
+.historia {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+}
+
+
+.historia p {
+
+    margin: 15px 0;
+
+    font-size: 17px;
+
+}
+
+
+.imagen-historia img {
+
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.2);
+
+}
+
+
+/* =========================
+   TARJETAS REGIONES
+========================= */
+
+.tarjetas {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.tarjeta {
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.13);
+
+    transition: .3s;
+
+    border-top: 7px solid #ffcd00;
+
+}
+
+
+.tarjeta:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.2);
+
+}
+
+
+.tarjeta img {
+
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+
+}
+
+
+.tarjeta div {
+
+    padding: 20px;
+
+}
+
+
+.tarjeta h3 {
+
+    color: #073d83;
+
+    margin-bottom: 8px;
+
+}
+
+
+.amarillo-borde {
+    border-color: #ffcd00;
+}
+
+.azul-borde {
+    border-color: #003893;
+}
+
+.rojo-borde {
+    border-color: #ce1126;
+}
+
+.verde-borde {
+    border-color: #0d9b4d;
+}
+
+.morado-borde {
+    border-color: #7138a5;
+}
+
+.naranja-borde {
+    border-color: #ff8500;
+}
+
+
+/* =========================
+   TRADICIONES
+========================= */
+
+.tradiciones {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.tradicion {
+
+    padding: 30px;
+
+    min-height: 220px;
+
+    border-radius: 25px;
+
+    color: white;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.18);
+
+}
+
+
+.tradicion h3 {
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.tradicion.amarillo {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffcd00,
+            #ef9900
+        );
+
+    color: #111;
+
+}
+
+
+.tradicion.azul {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0874db,
+            #003893
+        );
+
+}
+
+
+.tradicion.rojo {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ef3340,
+            #b40018
+        );
+
+}
+
+
+/* =========================
+   MUSICA
+========================= */
+
+.musica {
+
+    width: 100%;
+
+    padding: 75px 5%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #001d48,
+            #075bb2
+        );
+
+    color: white;
+
+}
+
+
+.musica .titulo-seccion h2 {
+
+    color: white;
+
+}
+
+
+.musica .titulo-seccion p {
+
+    color: white;
+
+}
+
+
+.musica-tarjetas {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.musica-card {
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    background:
+        rgba(255,255,255,.12);
+
+    border:
+        1px solid rgba(255,255,255,.25);
+
+    border-radius: 22px;
+
+    transition: .3s;
+
+}
+
+
+.musica-card:hover {
+
+    transform: translateY(-8px);
+
+    background:
+        rgba(255,255,255,.2);
+
+}
+
+
+.musica-card .icono {
+
+    font-size: 50px;
+
+}
+
+
+.musica-card h3 {
+
+    color: #ffcd00;
+
+    font-size: 23px;
+
+    margin: 10px;
+
+}
+
+
+/* =========================
+   GASTRONOMIA
+========================= */
+
+.comidas {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.comidas article {
+
+    background: white;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.13);
+
+    padding-bottom: 20px;
+
+}
+
+
+.comidas img {
+
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+}
+
+
+.comidas h3 {
+
+    margin:
+        15px 20px 5px;
+
+    color: #07833b;
+
+}
+
+
+.comidas p {
+
+    margin:
+        0 20px;
+
+}
+
+
+/* =========================
+   ARTESANIAS
+========================= */
+
+.artesanias {
+
+    width: 100%;
+
+    padding:
+        80px 10%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 80px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0bb,
+            #ffdce5
+        );
+
+}
+
+
+.artesanias h2 {
+
+    color: #7138a5;
+
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+
+    margin: 10px 0;
+
+}
+
+
+.artesanias p {
+
+    max-width: 700px;
+
+    margin: 15px 0;
+
+    font-size: 17px;
+
+}
+
+
+.artesania-imagen {
+
+    width: 260px;
+
+    height: 260px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    font-size: 60px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.15);
+
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.video {
+
+    max-width: 950px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.25);
+
+}
+
+
+.video iframe {
+
+    width: 100%;
+
+    height: 500px;
+
+    border: 0;
+
+    display: block;
+
+}
+
+
+/* =========================
+   CURIOSIDADES
+========================= */
+
+.curiosidades {
+
+    width: 100%;
+
+    padding: 70px 5%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffcd00,
+            #ffe66d
+        );
+
+}
+
+
+.curiosidad-contenido {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.curiosidad-contenido h2 {
+
+    color: #073d83;
+
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+
+    margin: 10px 0;
+
+}
+
+
+.curiosidad-contenido p {
+
+    max-width: 700px;
+
+    background: #063c83;
+
+    color: white;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    font-size: 18px;
+
+}
+
+
+.curiosidades button {
+
+    border: 0;
+
+    background: #e31c2d;
+
+    color: white;
+
+    padding: 14px 22px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    margin-top: 20px;
+
+    transition: .3s;
+
+}
+
+
+.curiosidades button:hover {
+
+    transform: scale(1.06);
+
+}
+
+
+.ave {
+
+    font-size: 130px;
+
+}
+
+
+/* =========================
+   GALERIA
+========================= */
+
+.galeria {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.galeria img {
+
+    width: 100%;
+
+    height: 210px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    transition: .3s;
+
+}
+
+
+.galeria img:hover {
+
+    transform:
+        scale(1.04);
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    color: white;
+
+    padding: 45px 20px;
+
+    background: #001f45;
+
+    border-top:
+        12px solid #ffcd00;
+
+}
+
+
+.bandera-footer {
+
+    font-size: 50px;
+
+}
+
+
+footer h2 {
+
+    color: #ffcd00;
+
+    font-family: Georgia, serif;
+
+    margin: 10px;
+
+}
+
+
+footer small {
+
+    color: #ddd;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .tarjetas,
+    .tradiciones,
+    .comidas {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .musica-tarjetas {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .galeria {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .historia {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .bandera {
+
+        height: 75px;
+
+    }
+
+
+    .titulo {
+
+        min-height: auto;
+
+    }
+
+
+    .titulo h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .titulo p {
+
+        font-size: 12px;
+
+    }
+
+
+    .colombia-icono {
+
+        font-size: 40px;
+
+    }
+
+
+    nav a {
+
+        font-size: 12px;
+
+        padding:
+            6px 8px;
+
+    }
+
+
+    .inicio {
+
+        min-height: 550px;
+
+    }
+
+
+    .inicio h2 {
+
+        font-size: 44px;
+
+    }
+
+
+    .inicio p {
+
+        font-size: 17px;
+
+    }
+
+
+    .tarjetas,
+    .tradiciones,
+    .comidas,
+    .musica-tarjetas,
+    .galeria {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .artesanias {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding:
+            60px 6%;
+
+    }
+
+
+    .video iframe {
+
+        height: 280px;
+
+    }
+
+
+    .curiosidad-contenido {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    .curiosidad-contenido h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .ave {
+
+        font-size: 90px;
+
+    }
+
+}
